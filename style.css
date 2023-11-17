@@ -465,14 +465,12 @@ body
     .profile {
         display: block;
     }
-    #text {
-        display: block;
-    }
     .banner header ul {
         display: none;
     }
     .content h2 {
         line-height: 1.2em;
+        font-size: 3.5em;
     }
 }
 
