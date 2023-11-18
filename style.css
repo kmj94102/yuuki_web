@@ -365,7 +365,7 @@ body
     width: 100%;
     height: 100%;
 }
-#viedo_tab
+#video_tab
 {
     margin: 30px 0 0 0;
     display: none;
@@ -373,14 +373,14 @@ body
     flex-direction: row;
     gap: 15px;
 }
-#viedo_tab .tab
+#video_tab .tab
 {
     height: 15px;
     width: 40px;
     background: #cbd5e0;
     border-radius: 10px;
 }
-#viedo_tab .tab.active {
+#video_tab .tab.active {
     background: #35E1A9;
 }
 #prev, #next
@@ -394,6 +394,8 @@ body
 .shorts iframe
 {
     margin: 50px 10px 0 10px;
+    width="315";
+    height="560";
 }
 .photo-table
 {
@@ -482,7 +484,7 @@ body
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch; 
     }
-    #viedo_tab{
+    #video_tab{
         display: flex;
     }
     .shorts iframe {

@@ -1,11 +1,13 @@
-const viedoList = [
+import { fetchImages, fetchVideos, fetchShorts } from './firebase.js';
+
+var videoList = [
     "https://www.youtube.com/embed/XVHrqGHkhnI",
     "https://www.youtube.com/embed/CHW7eWzbuCo",
     "https://www.youtube.com/embed/wl5YCR-zoRI",
     "https://www.youtube.com/embed/bOpmOch5JrI",
     "https://www.youtube.com/embed/FCypgZsdQ9U"
 ]
-const imageList = [
+var imageList = [
     "image/image01.jpeg",
     "image/image03.jpeg",
     "image/image04.jpeg",
@@ -17,14 +19,18 @@ const imageList = [
     "image/image09.jpeg",
     "image/image10.jpeg",
 ]
-var viedoPosition = 0
+var shortsList = [
+    "https://www.youtube.com/embed/P85upm09Egc",
+    "https://www.youtube.com/embed/8VW96fk6R2k",
+    "https://www.youtube.com/embed/eca_Pl3hx0Y"
+]
+var videoPosition = 0
 var imagePosition = 0
 
 document.addEventListener("DOMContentLoaded", function() {
-    resizeIframe();
     setImages();
-    setMobileImages();
-    setViedoTabs();
+    setVideoTabs();
+    setShorts();
 
     document.getElementById("next").addEventListener("click", nextVideoClick);
     document.getElementById("prev").addEventListener("click", prevVideoClick);
@@ -50,14 +56,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-window.addEventListener('resize', resizeIframe);
-
-function resizeIframe() {
-    var $videoIframe = document.querySelector('#video-container');
-    responsiveHeight = $videoIframe.offsetWidth * 0.5625;
-    $videoIframe.style.height = responsiveHeight + "px";
-}
-
 function changeVideo(item) {
     var iframe = document.getElementById("video");
     iframe.src = item;
@@ -65,22 +63,22 @@ function changeVideo(item) {
 
 function nextVideoClick() {
     var item = '';
-    if(viedoPosition < viedoList.length - 1) {
-        item = viedoList[++viedoPosition];
+    if(videoPosition < videoList.length - 1) {
+        item = videoList[++videoPosition];
     } else {
-        viedoPosition = 0
-        item = viedoList[viedoPosition];
+        videoPosition = 0
+        item = videoList[videoPosition];
     }
     changeVideo(item);
 }
 
 function prevVideoClick() {
     var item = '';
-    if(viedoPosition > 0) {
-        item = viedoList[--viedoPosition];
+    if(videoPosition > 0) {
+        item = videoList[--videoPosition];
     } else {
-        viedoPosition = viedoList.length - 1;
-        item = viedoList[viedoPosition];
+        videoPosition = videoList.length - 1;
+        item = videoList[videoPosition];
     }
     changeVideo(item);
 }
@@ -121,14 +119,17 @@ function galleryItemClick() {
     container.style.display = 'flex';
 }
 
-function setImages() {
+async function setImages() {
+    const images = await fetchImages();
+    if(images && images.length !== 0) {
+        imageList = images.map(item => item.address);
+    }
+
     const galleryItems = document.querySelectorAll(".gallery");
     galleryItems.forEach((gallery, index) => {
         gallery.src = imageList[index];
     });
-}
 
-function setMobileImages() {
     const container = document.getElementById("mobileImage");
     imageList.forEach(item => {
         const image = document.createElement("img");
@@ -137,9 +138,15 @@ function setMobileImages() {
     });
 }
 
-function setViedoTabs() {
-    const viedoTab = document.getElementById("viedo_tab");
-    viedoList.forEach((_, index) => {
+async function setVideoTabs() {
+    const videos = await fetchVideos();
+    console.log(videos);
+    if(videos && videos.length !== 0) {
+        videoList = videos.map(item => item.address);
+    }
+
+    const videoTab = document.getElementById("video_tab");
+    videoList.forEach((_, index) => {
         const tab = document.createElement('div');
         tab.classList.add('tab');
     
@@ -147,22 +154,39 @@ function setViedoTabs() {
             tab.classList.add('active');
         }
     
-        viedoTab.appendChild(tab);
+        videoTab.appendChild(tab);
     });
 
     const tabs = document.querySelectorAll('.tab');
 
     tabs.forEach((tab, index) => {
         tab.addEventListener('click', function() {
-            // 모든 탭의 active 클래스 제거
             tabs.forEach(t => {
                 t.classList.remove('active');
             });
 
-            // 클릭된 탭에만 active 클래스 추가
             this.classList.add('active');
-            viedoPosition = index;
-            changeVideo(viedoList[viedoPosition]);
+            videoPosition = index;
+            changeVideo(videoList[videoPosition]);
         });
+    });
+    changeVideo(videoList[0]);
+}
+
+async function setShorts() {
+    const shorts = await fetchShorts();
+    if(shorts && shorts.length !== 0) {
+        shortsList = shorts.map(item => item.address);
+    }
+    shortsList.forEach(item => {
+        const shortsDiv = document.getElementById('shorts');
+        const iframe = document.createElement('iframe');
+        iframe.src = item;
+        iframe.width = 315;
+        iframe.height = 560;
+        iframe.frameBorder = 0;
+        iframe.allowFullscreen = true;
+
+        shortsDiv.appendChild(iframe);
     });
 }
