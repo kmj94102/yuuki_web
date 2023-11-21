@@ -90,6 +90,7 @@ function changeImage(item) {
 
 function prevImageClick(event) {
     event.stopPropagation();
+    var item = '';
     if(imagePosition > 0) {
         item = imageList[--imagePosition];
     } else {
@@ -101,13 +102,13 @@ function prevImageClick(event) {
 
 function nextImageClick(event) {
     event.stopPropagation();
-        var item = '';
-        if(imagePosition < imageList.length - 1) {
-            item = imageList[++imagePosition];
-        } else {
-            imagePosition = 0
-            item = imageList[imagePosition];
-        }
+    var item = '';
+    if(imagePosition < imageList.length - 1) {
+        item = imageList[++imagePosition];
+    } else {
+        imagePosition = 0
+        item = imageList[imagePosition];
+    }
     changeImage(item);
 }
 
