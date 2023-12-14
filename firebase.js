@@ -16,21 +16,21 @@ const db = getFirestore(app);
 
 export async function fetchImages() {
   const imagesRef = collection(db, 'images');
-  const imageSnapshot = await getDocs(query(imagesRef, orderBy('timestamp', 'asc')));
+  const imageSnapshot = await getDocs(query(imagesRef, orderBy('order', 'asc')));
   const imageList = imageSnapshot.docs.map(doc => doc.data());
-  return imageList;
+  return imageList.slice(0, 10);
 }
 
 export async function fetchVideos() {
-  const imagesRef = collection(db, 'video');
-  const imageSnapshot = await getDocs(query(imagesRef, orderBy('timestamp', 'asc')));
-  const imageList = imageSnapshot.docs.map(doc => doc.data());
-  return imageList;
+  const videosRef = collection(db, 'video');
+  const videosSnapshot = await getDocs(query(videosRef, orderBy('order', 'asc')));
+  const videosList = videosSnapshot.docs.map(doc => doc.data());
+  return videosList;
 }
 
 export async function fetchShorts() {
-  const imagesRef = collection(db, 'shorts');
-  const imageSnapshot = await getDocs(query(imagesRef, orderBy('timestamp', 'asc')));
-  const imageList = imageSnapshot.docs.map(doc => doc.data());
-  return imageList;
+  const shortsRef = collection(db, 'shorts');
+  const shortsSnapshot = await getDocs(query(shortsRef, orderBy('order', 'asc')));
+  const shortsList = shortsSnapshot.docs.map(doc => doc.data());
+  return shortsList.slice(0, 3);
 }
