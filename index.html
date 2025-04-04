@@ -4,193 +4,272 @@
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
         <title>kinchiku Yuuki</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script type="module" src="firebase.js"></script>
-        <script type="module" src="script.js"></script>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <link rel="stylesheet" type="text/css" href="style2.css">
     </head>
     <body>
-        <section class="banner">
-            <header>
-                <div>
-                    <div id="navigation" class="navigation">
-                        <div class="menuToggle"></div>
-                        <ul style="display: block; padding: 0px;">
-                            <li>
-                                <a href="https://www.youtube.com/@yuuki_room">
-                                    <span class="title">Youtube</span>
-                                    <span class="title">></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/yuuki__kinchiku">
-                                    <span class="title">Twitter</span>
-                                    <span class="title">></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.instagram.com/yuuki__kinchiku">
-                                    <span class="title">Instagram</span>
-                                    <span class="title">></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.tiktok.com/@yuuki__kinchiku">
-                                    <span class="title">Tiktok</span>
-                                    <span class="title">></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://onlyfans.com/yuuki_kinchiku">
-                                    <span class="title">OnlyFans</span>
-                                    <span class="title">></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://ykinchiku.booth.pm/">
-                                    <span class="title">Shop</span>
-                                    <span class="title">></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.amazon.co.jp/hz/wishlist/ls/223KH2VBZTSQZ?ref_=wl_share">
-                                    <span class="title">Gift</span>
-                                    <span class="title">></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <span></span>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="https://ykinchiku.booth.pm/" target="_blank">Shop</a></li>
-                        <li><a href="https://www.amazon.co.jp/hz/wishlist/ls/223KH2VBZTSQZ?ref_=wl_share" target="_blank">Gift</a></li>
-                    </ul>
-                </div>
-            </header>
-            <img src="image/img_bg.png" class="colors">
-            <img src="image/img_main.png" class="men"> 
-            <div class="content">
-                <img class="profile" src="image/profile.png">
-                <h3>私のプロフィールへようこそ</h3>
-                <h2>筋築家 <span id="text">ゆうき</span></h2>
-                <p>Japanese | 185cm | 80kg</p>
-            </div>
-          
-            <ul class="sci">
-                <li><a href="https://www.youtube.com/@yuuki_room" target="_blank"><img src="image/ic_youtube.svg"></a></li>
-                <li><a href="https://twitter.com/yuuki__kinchiku" target="_blank"><img src="image/ic_twitter.svg"></a></li>
-                <li><a href="https://www.instagram.com/yuuki__kinchiku" target="_blank"><img src="image/ic_instagram.svg"></a></li>
-                <li><a href="https://www.tiktok.com/@yuuki__kinchiku" target="_blank"><img src="image/ic_tictok.svg"></a></li>
-                <li><a href="https://onlyfans.com/yuuki_kinchiku" target="_blank"><img src="image/ic_only_fans.svg"></a></li>
+        <div id="gnb">
+            <img src="image/ic_logo.svg">
+            <ul>
+                <li><a>홈</a></li>
+                <li><a>구독 서비스</a></li>
+                <li><a>콜라보 & 이벤트</a></li>
+                <li><a>Other</a></li>
             </ul>
-        </section>
-        <section class="sub">
-            <div class="sub_title">
-                <span style="text-align: center;">のんびり日常を投稿していきます🌿</span>
-                <span style="text-align: center;">いろんなテーマでポスティングをしています</span>
-            </div>
-            <div class="scroll">
-                <span>建築家</span>
-                <span>筋肉</span>
-                <span>勉強会</span>
-                <span>サウナ</span>
-                <span>運動</span>
-                <span>旅行</span>
-                <span>Vlog</span>
-                <span>コスプレ</span>
-                <span>Look book</span>
-                <span>日本</span>
-                <span>フィリピン</span>
-                <span>ジブリ</span>
-                <span>建築物</span>
-                <span>腹筋</span>
-                <span>写真</span>
-                <span>ショーツ</span>
-                <span>Q&A</span>
-                <span>呪術廻戦</span>
-                <span>マッシュル</span>
-                <span>チェンソーマン</span>
-                <span>スパイダーマン</span>
-                </div>
-            </div>
-        </section>
-        <section class="introduce">
-            <div class="sub_title">
-                <span>VIDEO 📹</span>
-            </div>
-            <div class="container">
-                <img id="prev" src="image/ic_back.svg" style="width: 50px; margin-left: 10px; margin-right: 15px;">
-                <div id="video-container">
-                    <iframe id="video" src="https://www.youtube.com/embed/XVHrqGHkhnI" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <img id="next" src="image/ic_next.svg" style="width: 50px; margin-left: 15px; margin-right: 10px;">
-            </div>
-            <div id="video_tab"></div>
-            <div class="sub_title" style="margin-top: 50px;">
-                <span>SHORTS 🎵</span>
-                <div id="shorts" class="shorts"></div>
-            </div>
-            <div class="sub_title" style="margin-top: 50px;">
-                <span>IMAGE 📷</span>
-            </div>
-            <table class="photo-table">
-                <tr>
-                    <td colspan="6" rowspan="4"><img class="gallery" src="image/image01.jpeg" data-index="0"></td>
-                    <td colspan="3" rowspan="2"><img class="gallery" src="image/image03.jpeg" data-index="1"></td>
-                    <td colspan="3" rowspan="2"><img class="gallery" src="image/image04.jpeg" data-index="2"></td>
-                </tr>
-                <tr></tr>
-                <tr>
-                    <td colspan="3" rowspan="2"><img class="gallery" src="image/image05.jpeg" data-index="3"></td>
-                    <td colspan="3" rowspan="2"><img class="gallery" src="image/image06.jpeg" data-index="4"></td>
-                </tr>
-                <tr></tr>
-                <tr>
-                    <td colspan="3" rowspan="2"><img class="gallery" src="image/image07.jpeg" data-index="5"></td>
-                    <td colspan="3" rowspan="2"><img class="gallery" src="image/image08.jpeg" data-index="6"></td>
-                    <td colspan="6" rowspan="4"><img class="gallery" src="image/image02.jpeg" data-index="7"></td>
-                </tr>
-                <tr></tr>
-                <tr>
-                    <td colspan="3" rowspan="2"><img class="gallery" src="image/image09.jpeg" data-index="8"></td>
-                    <td colspan="3" rowspan="2"><img class="gallery" src="image/image10.jpeg" data-index="9"></td>
-                </tr>
-                <tr></tr>
-                <tr style="visibility: hidden; height: 0px;">
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
-        </section>
-        <div id="bigImageContainer">
-            <img id="bigImagePrev" src="image/ic_back.svg" style="height: 50px; width: 50px; margin-left: 10px; margin-right: 15px;">
-            <img id="bigImage" src="image/image09.jpeg">
-            <img id="bigImageNext" src="image/ic_next.svg" style="height: 50px; width: 50px; margin-left: 15px; margin-right: 10px;">
         </div>
-        <div id="mobileImage"></div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            resizeIframe();
-        });
-        window.addEventListener('resize', resizeIframe);
+        <div id="header">
+            <span>筋築家 ゆうき</span>
+            <span>のんびり日常を投稿していきます🌿</span>
+<!--            <img src="image/img_header1.png">-->
+<!--            <img src="image/img_header2.png">-->
+<!--            <img src="image/img_header3.png">-->
+        </div>
+        <div id="site_list">
+            <div class="site_item">
+                <img src="image/img_youtube_logo_gray.png">
+            </div>
+            <div class="site_item">
+                <img src="image/img_instagram_logo_gray.png">
+            </div>
+            <div class="site_item">
+                <img src="image/img_x_main_logo_gray.png">
+            </div>
+            <div class="site_item">
+                <img src="image/img_x_sub_logo_gray.png">
+            </div>
+            <div class="site_item">
+                <img src="image/img_tiktok_logo_gray.png">
+            </div>
+            <div class="site_item">
+                <img src="image/img_only_fans_logo_gray.png">
+            </div>
+            <div class="site_item">
+                <img src="image/img_fantia_logo_gray.png">
+            </div>
+            <div class="site_item">
+                <img src="image/img_line_logo_gray.png">
+            </div>
+        </div>
+        <div id="banner">
+            <iframe id="video" src="https://www.youtube.com/embed/XVHrqGHkhnI" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="subscription" class="group">
+            <div class="sub_title">구독 서비스</div>
+            <div id="subscription_items">
+                <div class="subscription_item">
+                    <div class="subscription_title">Only Fans</div>
+                    <div class="subscription_price">
+                        <span>$6</span>
+                        <span>/ month</span>
+                    </div>
+                    <div class="description_list">
+                        <div class="description">
+                            <img src="image/ic_check.svg">
+                            <span>육체미를 표현</span>
+                        </div>
+                        <div class="description">
+                            <img src="image/ic_check.svg">
+                            <span>고화질 사진 / 영상 제공</span>
+                        </div>
+                        <div class="description">
+                            <img src="image/ic_not.svg">
+                            <span>컨텐츠 불법 복제 금지</span>
+                        </div>
+                        <div class="description">
+                            <img src="image/ic_not.svg">
+                            <span>오래된 자료는 삭제됩니다</span>
+                        </div>
+                    </div>
+                    <div class="precautions">※ Fantia와 같은 내용의 콘텐츠입니다.</div>
+                    <div class="subscription_start">지금 시작하기</div>
+                </div>
 
-        function resizeIframe() {
-            var videoIframe = document.querySelector('#video-container');
-            responsiveHeight = videoIframe.offsetWidth * 0.5625;
-            videoIframe.style.height = responsiveHeight + "px";
-        }
-    </script>
+                <div class="subscription_item">
+                    <div class="subscription_title">Only Fans</div>
+                    <div class="subscription_price">
+                        <span>$6</span>
+                        <span>/ month</span>
+                    </div>
+                    <div class="description_list">
+                        <div class="description">
+                            <img src="image/ic_check.svg">
+                            <span>육체미를 표현</span>
+                        </div>
+                        <div class="description">
+                            <img src="image/ic_check.svg">
+                            <span>고화질 사진 / 영상 제공</span>
+                        </div>
+                        <div class="description">
+                            <img src="image/ic_not.svg">
+                            <span>컨텐츠 불법 복제 금지</span>
+                        </div>
+                        <div class="description">
+                            <img src="image/ic_not.svg">
+                            <span>오래된 자료는 삭제됩니다</span>
+                        </div>
+                    </div>
+                    <div class="precautions">※ Fantia와 같은 내용의 콘텐츠입니다.</div>
+                    <div class="subscription_start">지금 시작하기</div>
+                </div>
+
+                <div class="subscription_item">
+                    <div class="subscription_title">Only Fans</div>
+                    <div class="subscription_price">
+                        <span>$6</span>
+                        <span>/ month</span>
+                    </div>
+                    <div class="description_list">
+                        <div class="description">
+                            <img src="image/ic_check.svg">
+                            <span>육체미를 표현</span>
+                        </div>
+                        <div class="description">
+                            <img src="image/ic_check.svg">
+                            <span>고화질 사진 / 영상 제공</span>
+                        </div>
+                        <div class="description">
+                            <img src="image/ic_not.svg">
+                            <span>컨텐츠 불법 복제 금지</span>
+                        </div>
+                        <div class="description">
+                            <img src="image/ic_not.svg">
+                            <span>오래된 자료는 삭제됩니다</span>
+                        </div>
+                    </div>
+                    <div class="precautions">※ Fantia와 같은 내용의 콘텐츠입니다.</div>
+                    <div class="subscription_start">지금 시작하기</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="event" class="group">
+            <div class="sub_title">콜라보 & 이벤트</div>
+            <div id="event_item_list">
+                <div class="event_item">
+                    <img src="image/image03.jpeg"/>
+                    <div class="event_info">
+                        <div class="badge">
+                            <span class="ongoing">진행중</span>
+                            <span class="brand">KANGOL</span>
+                        </div>
+                        <span class="event_date">25.03.04 ~ 25.04.15</span>
+                    </div>
+                    <div class="event_title">KANGOL 콜라보 제 2탄</div>
+                    <div class="event_content">두 번째로 KANGOL과 콜라보레이션을 진행하였습니다.<br>
+                        직접 그린 로고가 들어간 후드티, 티셔츠와 싸인이 새겨진 팔찌가 있습니다<br>
+                        운이 좋으면 친필 싸인을 받을수 있을지도?!</div>
+                    <div class="event_start">구매 사이트로 이동</div>
+                </div>
+
+                <div class="event_item">
+                    <img src="image/image03.jpeg"/>
+                    <div class="event_info">
+                        <div class="badge">
+                            <span class="ongoing">진행중</span>
+                            <span class="brand">KANGOL</span>
+                        </div>
+                        <span class="event_date">25.03.04 ~ 25.04.15</span>
+                    </div>
+                    <div class="event_title">KANGOL 콜라보 제 2탄</div>
+                    <div class="event_content">두 번째로 KANGOL과 콜라보레이션을 진행하였습니다.<br>
+                        직접 그린 로고가 들어간 후드티, 티셔츠와 싸인이 새겨진 팔찌가 있습니다<br>
+                        운이 좋으면 친필 싸인을 받을수 있을지도?!</div>
+                    <div class="event_start">구매 사이트로 이동</div>
+                </div>
+
+                <div class="event_item">
+                    <img src="image/image03.jpeg"/>
+                    <div class="event_info">
+                        <div class="badge">
+                            <span class="ongoing">진행중</span>
+                            <span class="brand">KANGOL</span>
+                        </div>
+                        <span class="event_date">25.03.04 ~ 25.04.15</span>
+                    </div>
+                    <div class="event_title">KANGOL 콜라보 제 2탄</div>
+                    <div class="event_content">두 번째로 KANGOL과 콜라보레이션을 진행하였습니다.<br>
+                        직접 그린 로고가 들어간 후드티, 티셔츠와 싸인이 새겨진 팔찌가 있습니다<br>
+                        운이 좋으면 친필 싸인을 받을수 있을지도?!</div>
+                    <div class="event_start">구매 사이트로 이동</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="others" class="group">
+            <div class="sub_title">Others...</div>
+            <div id="others_item_list">
+                <div class="others_item">
+                    <div class="others_number">01</div>
+                    <div class="others_title">선물하기</div>
+                    <div class="others_content">아마존 선물하기 기능을 활용하여<br>
+                        위시 리스트에 있는 상품 또는 원하시는 상품을 선물할 수 있어요</div>
+                    <div class="others_move">
+                        <img src="image/ic_arrow.svg"/>
+                    </div>
+                </div>
+
+                <div class="others_item">
+                    <div class="others_number">02</div>
+                    <div class="others_title">선물하기</div>
+                    <div class="others_content">아마존 선물하기 기능을 활용하여<br>
+                        위시 리스트에 있는 상품 또는 원하시는 상품을 선물할 수 있어요</div>
+                    <div class="others_move">
+                        <img src="image/ic_arrow.svg"/>
+                    </div>
+                </div>
+
+                <div class="others_item">
+                    <div class="others_number">03</div>
+                    <div class="others_title">선물하기</div>
+                    <div class="others_content">아마존 선물하기 기능을 활용하여<br>
+                        위시 리스트에 있는 상품 또는 원하시는 상품을 선물할 수 있어요</div>
+                    <div class="others_move">
+                        <img src="image/ic_arrow.svg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--        <div class="container">-->
+<!--            <div class="slider">-->
+<!--                <div class="slides" style="&#45;&#45;img: url('image/image01.jpeg')">-->
+<!--                    <div class="content"></div>-->
+<!--                </div>-->
+<!--                <div class="slides" style="&#45;&#45;img: url('image/image02.jpeg')">-->
+<!--                    <div class="content"></div>-->
+<!--                </div>-->
+<!--                <div class="slides" style="&#45;&#45;img: url('image/image03.jpeg')">-->
+<!--                    <div class="content"></div>-->
+<!--                </div>-->
+<!--                <div class="slides" style="&#45;&#45;img: url('image/image04.jpeg')">-->
+<!--                    <div class="content"></div>-->
+<!--                </div>-->
+<!--                <div class="slides" style="&#45;&#45;img: url('image/image05.jpeg')">-->
+<!--                    <div class="content"></div>-->
+<!--                </div>-->
+<!--                <div class="slides" style="&#45;&#45;img: url('image/image06.jpeg')">-->
+<!--                    <div class="content"></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="buttons">-->
+<!--                <span class="prev"></span>-->
+<!--                <span class="next"></span>-->
+<!--            </div>-->
+<!--        </div>-->
+        <script>
+<!--            let next = document.querySelector('.next');-->
+<!--            let prev = document.querySelector('.prev');-->
+<!--            let slider = document.querySelector('.slider');-->
+
+<!--            next.addEventListener('click', function(){-->
+<!--                let slides = document.querySelectorAll('.slides');-->
+<!--                slider.appendChild(slides[0]);-->
+<!--            });-->
+
+<!--            prev.addEventListener('click', function(){-->
+<!--                let slides = document.querySelectorAll('.slides');-->
+<!--                slider.prepend(slides[slides.length -1]);-->
+<!--            });-->
+        </script>
     </body>
 </html>
