@@ -5,271 +5,51 @@
         <meta name="viewport" content="width=device-width, inital-scale=1.0">
         <title>kinchiku Yuuki</title>
         <link rel="stylesheet" type="text/css" href="style2.css">
+        <script type="module" src="script.js"></script>
+        <script src="i18n.js"></script>
     </head>
     <body>
         <div id="gnb">
-            <img src="image/ic_logo.svg">
-            <ul>
-                <li><a>홈</a></li>
-                <li><a>구독 서비스</a></li>
-                <li><a>콜라보 & 이벤트</a></li>
-                <li><a>Other</a></li>
-            </ul>
+            <div id="menu">
+                <img src="image/ic_logo.svg">
+                <ul>
+                    <li><a id="home" href="#">홈</a></li>
+                    <li><a class="subscription" href="#subscription" >구독 서비스</a></li>
+                    <li><a class="collaboration" href="#event">콜라보 & 이벤트</a></li>
+                    <li><a class="other" href="#others">Other</a></li>
+                </ul>
+            </div>
+            <div id="language">
+                <img class="country not_select_language" src="image/img_japan.png" data-name="ja">
+                <img class="country" src="image/img_korea.png" data-name="ko">
+                <img class="country not_select_language" src="image/img_usa.png" data-name="en">
+            </div>
         </div>
         <div id="header">
-            <span>筋築家 ゆうき</span>
-            <span>のんびり日常を投稿していきます🌿</span>
-<!--            <img src="image/img_header1.png">-->
-<!--            <img src="image/img_header2.png">-->
-<!--            <img src="image/img_header3.png">-->
+            <span id="name">筋築家 ゆうき</span>
+            <span>Japanese | 185cm | 80kg</span>
+            <span id="main_message">のんびり日常を投稿していきます🌿</span>
         </div>
-        <div id="site_list">
-            <div class="site_item">
-                <img src="image/img_youtube_logo_gray.png">
-            </div>
-            <div class="site_item">
-                <img src="image/img_instagram_logo_gray.png">
-            </div>
-            <div class="site_item">
-                <img src="image/img_x_main_logo_gray.png">
-            </div>
-            <div class="site_item">
-                <img src="image/img_x_sub_logo_gray.png">
-            </div>
-            <div class="site_item">
-                <img src="image/img_tiktok_logo_gray.png">
-            </div>
-            <div class="site_item">
-                <img src="image/img_only_fans_logo_gray.png">
-            </div>
-            <div class="site_item">
-                <img src="image/img_fantia_logo_gray.png">
-            </div>
-            <div class="site_item">
-                <img src="image/img_line_logo_gray.png">
-            </div>
-        </div>
+        <div id="site_list"></div>
+
         <div id="banner">
             <iframe id="video" src="https://www.youtube.com/embed/XVHrqGHkhnI" frameborder="0" allowfullscreen></iframe>
         </div>
+        <div id="indicatorContainer" class="indicator"></div>
+
         <div id="subscription" class="group">
-            <div class="sub_title">구독 서비스</div>
-            <div id="subscription_items">
-                <div class="subscription_item">
-                    <div class="subscription_title">Only Fans</div>
-                    <div class="subscription_price">
-                        <span>$6</span>
-                        <span>/ month</span>
-                    </div>
-                    <div class="description_list">
-                        <div class="description">
-                            <img src="image/ic_check.svg">
-                            <span>육체미를 표현</span>
-                        </div>
-                        <div class="description">
-                            <img src="image/ic_check.svg">
-                            <span>고화질 사진 / 영상 제공</span>
-                        </div>
-                        <div class="description">
-                            <img src="image/ic_not.svg">
-                            <span>컨텐츠 불법 복제 금지</span>
-                        </div>
-                        <div class="description">
-                            <img src="image/ic_not.svg">
-                            <span>오래된 자료는 삭제됩니다</span>
-                        </div>
-                    </div>
-                    <div class="precautions">※ Fantia와 같은 내용의 콘텐츠입니다.</div>
-                    <div class="subscription_start">지금 시작하기</div>
-                </div>
-
-                <div class="subscription_item">
-                    <div class="subscription_title">Only Fans</div>
-                    <div class="subscription_price">
-                        <span>$6</span>
-                        <span>/ month</span>
-                    </div>
-                    <div class="description_list">
-                        <div class="description">
-                            <img src="image/ic_check.svg">
-                            <span>육체미를 표현</span>
-                        </div>
-                        <div class="description">
-                            <img src="image/ic_check.svg">
-                            <span>고화질 사진 / 영상 제공</span>
-                        </div>
-                        <div class="description">
-                            <img src="image/ic_not.svg">
-                            <span>컨텐츠 불법 복제 금지</span>
-                        </div>
-                        <div class="description">
-                            <img src="image/ic_not.svg">
-                            <span>오래된 자료는 삭제됩니다</span>
-                        </div>
-                    </div>
-                    <div class="precautions">※ Fantia와 같은 내용의 콘텐츠입니다.</div>
-                    <div class="subscription_start">지금 시작하기</div>
-                </div>
-
-                <div class="subscription_item">
-                    <div class="subscription_title">Only Fans</div>
-                    <div class="subscription_price">
-                        <span>$6</span>
-                        <span>/ month</span>
-                    </div>
-                    <div class="description_list">
-                        <div class="description">
-                            <img src="image/ic_check.svg">
-                            <span>육체미를 표현</span>
-                        </div>
-                        <div class="description">
-                            <img src="image/ic_check.svg">
-                            <span>고화질 사진 / 영상 제공</span>
-                        </div>
-                        <div class="description">
-                            <img src="image/ic_not.svg">
-                            <span>컨텐츠 불법 복제 금지</span>
-                        </div>
-                        <div class="description">
-                            <img src="image/ic_not.svg">
-                            <span>오래된 자료는 삭제됩니다</span>
-                        </div>
-                    </div>
-                    <div class="precautions">※ Fantia와 같은 내용의 콘텐츠입니다.</div>
-                    <div class="subscription_start">지금 시작하기</div>
-                </div>
-
-            </div>
+            <div class="sub_title subscription">구독 서비스</div>
+            <div id="subscription_items"></div>
         </div>
 
         <div id="event" class="group">
-            <div class="sub_title">콜라보 & 이벤트</div>
-            <div id="event_item_list">
-                <div class="event_item">
-                    <img src="image/image03.jpeg"/>
-                    <div class="event_info">
-                        <div class="badge">
-                            <span class="ongoing">진행중</span>
-                            <span class="brand">KANGOL</span>
-                        </div>
-                        <span class="event_date">25.03.04 ~ 25.04.15</span>
-                    </div>
-                    <div class="event_title">KANGOL 콜라보 제 2탄</div>
-                    <div class="event_content">두 번째로 KANGOL과 콜라보레이션을 진행하였습니다.<br>
-                        직접 그린 로고가 들어간 후드티, 티셔츠와 싸인이 새겨진 팔찌가 있습니다<br>
-                        운이 좋으면 친필 싸인을 받을수 있을지도?!</div>
-                    <div class="event_start">구매 사이트로 이동</div>
-                </div>
-
-                <div class="event_item">
-                    <img src="image/image03.jpeg"/>
-                    <div class="event_info">
-                        <div class="badge">
-                            <span class="ongoing">진행중</span>
-                            <span class="brand">KANGOL</span>
-                        </div>
-                        <span class="event_date">25.03.04 ~ 25.04.15</span>
-                    </div>
-                    <div class="event_title">KANGOL 콜라보 제 2탄</div>
-                    <div class="event_content">두 번째로 KANGOL과 콜라보레이션을 진행하였습니다.<br>
-                        직접 그린 로고가 들어간 후드티, 티셔츠와 싸인이 새겨진 팔찌가 있습니다<br>
-                        운이 좋으면 친필 싸인을 받을수 있을지도?!</div>
-                    <div class="event_start">구매 사이트로 이동</div>
-                </div>
-
-                <div class="event_item">
-                    <img src="image/image03.jpeg"/>
-                    <div class="event_info">
-                        <div class="badge">
-                            <span class="ongoing">진행중</span>
-                            <span class="brand">KANGOL</span>
-                        </div>
-                        <span class="event_date">25.03.04 ~ 25.04.15</span>
-                    </div>
-                    <div class="event_title">KANGOL 콜라보 제 2탄</div>
-                    <div class="event_content">두 번째로 KANGOL과 콜라보레이션을 진행하였습니다.<br>
-                        직접 그린 로고가 들어간 후드티, 티셔츠와 싸인이 새겨진 팔찌가 있습니다<br>
-                        운이 좋으면 친필 싸인을 받을수 있을지도?!</div>
-                    <div class="event_start">구매 사이트로 이동</div>
-                </div>
-
-            </div>
+            <div class="sub_title collaboration">콜라보 & 이벤트</div>
+            <div id="event_item_list"></div>
         </div>
 
         <div id="others" class="group">
             <div class="sub_title">Others...</div>
-            <div id="others_item_list">
-                <div class="others_item">
-                    <div class="others_number">01</div>
-                    <div class="others_title">선물하기</div>
-                    <div class="others_content">아마존 선물하기 기능을 활용하여<br>
-                        위시 리스트에 있는 상품 또는 원하시는 상품을 선물할 수 있어요</div>
-                    <div class="others_move">
-                        <img src="image/ic_arrow.svg"/>
-                    </div>
-                </div>
-
-                <div class="others_item">
-                    <div class="others_number">02</div>
-                    <div class="others_title">선물하기</div>
-                    <div class="others_content">아마존 선물하기 기능을 활용하여<br>
-                        위시 리스트에 있는 상품 또는 원하시는 상품을 선물할 수 있어요</div>
-                    <div class="others_move">
-                        <img src="image/ic_arrow.svg"/>
-                    </div>
-                </div>
-
-                <div class="others_item">
-                    <div class="others_number">03</div>
-                    <div class="others_title">선물하기</div>
-                    <div class="others_content">아마존 선물하기 기능을 활용하여<br>
-                        위시 리스트에 있는 상품 또는 원하시는 상품을 선물할 수 있어요</div>
-                    <div class="others_move">
-                        <img src="image/ic_arrow.svg"/>
-                    </div>
-                </div>
-            </div>
+            <div id="others_item_list"></div>
         </div>
-<!--        <div class="container">-->
-<!--            <div class="slider">-->
-<!--                <div class="slides" style="&#45;&#45;img: url('image/image01.jpeg')">-->
-<!--                    <div class="content"></div>-->
-<!--                </div>-->
-<!--                <div class="slides" style="&#45;&#45;img: url('image/image02.jpeg')">-->
-<!--                    <div class="content"></div>-->
-<!--                </div>-->
-<!--                <div class="slides" style="&#45;&#45;img: url('image/image03.jpeg')">-->
-<!--                    <div class="content"></div>-->
-<!--                </div>-->
-<!--                <div class="slides" style="&#45;&#45;img: url('image/image04.jpeg')">-->
-<!--                    <div class="content"></div>-->
-<!--                </div>-->
-<!--                <div class="slides" style="&#45;&#45;img: url('image/image05.jpeg')">-->
-<!--                    <div class="content"></div>-->
-<!--                </div>-->
-<!--                <div class="slides" style="&#45;&#45;img: url('image/image06.jpeg')">-->
-<!--                    <div class="content"></div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="buttons">-->
-<!--                <span class="prev"></span>-->
-<!--                <span class="next"></span>-->
-<!--            </div>-->
-<!--        </div>-->
-        <script>
-<!--            let next = document.querySelector('.next');-->
-<!--            let prev = document.querySelector('.prev');-->
-<!--            let slider = document.querySelector('.slider');-->
-
-<!--            next.addEventListener('click', function(){-->
-<!--                let slides = document.querySelectorAll('.slides');-->
-<!--                slider.appendChild(slides[0]);-->
-<!--            });-->
-
-<!--            prev.addEventListener('click', function(){-->
-<!--                let slides = document.querySelectorAll('.slides');-->
-<!--                slider.prepend(slides[slides.length -1]);-->
-<!--            });-->
-        </script>
     </body>
 </html>
