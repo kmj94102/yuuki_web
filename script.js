@@ -184,7 +184,7 @@ function fetchEventList() {
     eventList.forEach(item => {
         const html = `
           <div class="event_item">
-              <img src=${item.image}/>
+              <img src=${item.image}>
               <div class="event_info">
                   <div class="badge">
                       <span class=${isPastDate(item.endDate) ? "ongoing" : "completed"}>${isPastDate(item.endDate) ? "진행중" : "종료"}</span>
