@@ -50,7 +50,11 @@ const i18n = {
     Laswon2Title: "할로윈 랜덤 브로마이드",
     Laswon2Content: "상품 번호 : 1050790005 / 1050790006 / 1050790007 / 1050790008<br>할로윈을 기념하여 여러가지 복장을 입어보았습니다.<br>흔히 볼 수 없는 사진을 얻을 수도?!<br>브로마이드 외에도 스티커 2종과 스탠드도 있습니다",
     Laswon3Title: "2025년 운세 브로마이드",
-    Laswon3Content: "상품 번호 : 1050790009<br>2025년 당신의 운세를 확인해 보세요<br>공개된 4장 외에 스페셜 브로마이드도 준비되어 있습니다"
+    Laswon3Content: "상품 번호 : 1050790009<br>2025년 당신의 운세를 확인해 보세요<br>공개된 4장 외에 스페셜 브로마이드도 준비되어 있습니다",
+    ongoing: "진행중",
+    finished: "종료",
+    viewDetails: "진행중",
+    EndOfSale: "판매종료"
   },
   ja: {
     name: "筋築家 ゆうき",
@@ -77,7 +81,7 @@ const i18n = {
     fantiaNo2: "顔公開、性器露出なし",
     fantiaNo3: "コンテンツ不法複製禁止",
     fantiaNote: "※ OnlyFansと同じ内容のコンテンツです。",
-    instagramPrice: "400円",
+    instagramPrice: "330円",
     instagramOk1: "購読者バッジ",
     instagramOk2: "購読者専用コンテンツ",
     instagramOk3: "購読者専用ビハインドストーリー",
@@ -103,7 +107,11 @@ const i18n = {
     Laswon2Title: "ハロウィンランダムブロマイド",
     Laswon2Content: "商品番号 : 1050790005 / 1050790006 / 1050790007 / 1050790008<br>ハロウィンを記念して色んな服装を着てみました。<br>珍しい写真もゲットできますかも？！<br>ブロマイドの他にもステッカー2点とスタンドもあります",
     Laswon3Title: "2025年おみくじブロマイド",
-    Laswon3Content: "商品番号 : 1050790009<br>2025年のあなたの運勢を確認してみましょう<br>公開された4枚の他にスペシャルブロマイドもご用意しております"
+    Laswon3Content: "商品番号 : 1050790009<br>2025年のあなたの運勢を確認してみましょう<br>公開された4枚の他にスペシャルブロマイドもご用意しております",
+    ongoing: "進行中",
+    finished: "終了",
+    viewDetails: "詳細を見る",
+    EndOfSale: "販売終了"
   },
   en: {
     name: "Yuuki Kinchiku",
@@ -130,7 +138,7 @@ const i18n = {
     fantiaNo2: "Facial disclosure, no genital exposure",
     fantiaNo3: "Prohibiting content piracy",
     fantiaNote: "※ It's the same content as OnlyFans.",
-    instagramPrice: "$6",
+    instagramPrice: "330円",
     instagramOk1: "Subscriber Badge",
     instagramOk2: "Subscriber-only content",
     instagramOk3: "Behind-the-scenes stories only for subscribers",
@@ -156,6 +164,10 @@ const i18n = {
     Laswon2Title: "Halloween Random Bromide",
     Laswon2Content: "Product number : 1050790005 / 1050790006 / 1050790007 / 1050790008<br>I tried on a variety of outfits to celebrate Halloween.<br>You can even get a photo that you don't often see?!<br>There are two kinds of stickers and a stand besides the bromide",
     Laswon3Title: "2025 Fortune Bromide",
-    Laswon3Content: "Product number : 1050790009<br>Check your fortune for 2025<br>In addition to the four open chapters, we have special bromides"
+    Laswon3Content: "Product number : 1050790009<br>Check your fortune for 2025<br>In addition to the four open chapters, we have special bromides",
+    ongoing: "Ongoing",
+    finished: "Finished",
+    viewDetails: "View Details",
+    EndOfSale: "End of sale"
   }
 };

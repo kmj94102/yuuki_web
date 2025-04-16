@@ -1,6 +1,6 @@
 import { fetchImages, fetchVideos, fetchShorts } from './firebase.js';
 
-let currentLang = 'ko';
+let currentLang = 'jp';
 let youtubeList = [
     "https://www.youtube.com/embed/LDZi5-e_cLA",
     "https://www.youtube.com/embed/bPgJ4xrWx1g",
@@ -57,10 +57,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const lang = navigator.language || navigator.userLanguage;
     if (lang.startsWith('ko')) {
       currentLang = 'ko';
+      document.getElementById("ko").classList.remove('not_select_language');
     } else if (lang.startsWith('ja')) {
       currentLang = 'ja';
+      document.getElementById("ja").classList.remove('not_select_language');
     } else {
       currentLang = 'en';
+      document.getElementById("en").classList.remove('not_select_language');
     }
 
     const site_list = document.getElementById("site_list");
@@ -187,14 +190,14 @@ function fetchEventList() {
               <img src=${item.image}>
               <div class="event_info">
                   <div class="badge">
-                      <span class=${isPastDate(item.endDate) ? "ongoing" : "completed"}>${isPastDate(item.endDate) ? "진행중" : "종료"}</span>
+                      <span class=${isPastDate(item.endDate행) ? "ongoing" : "completed"}>${isPastDate(item.endDate) ? i18n[currentLang].ongoing : i18n[currentLang].finished}</span>
                       <span class="brand">${item.brand}</span>
                   </div>
                   <span class="event_date">${item.startDate} ~ ${item.endDate}</span>
               </div>
               <div class="event_title">${item.title}</div>
               <div class="event_content">${item.content}</div>
-              <div class="event_start" data-name="${item.link}">${isPastDate(item.endDate) ? "상세보기" : "판매종료"}</div>
+              <div class="event_start" data-name="${item.link}">${isPastDate(item.endDate) ? i18n[currentLang].viewDetails : i18n[currentLang].EndOfSale}</div>
           </div>
         `;
 
